@@ -6,7 +6,8 @@ description: |
   Swift makes it easy to write software that is incredibly fast and safe by design.
   Our goals for Swift are ambitious: we want to make programming simple things easy, and difficult things possible.
 grade: devel
-confinement: devmode # use 'strict' once you have the right plugs and slots
+confinement: classic
+architectures: [amd64]
 
 parts:
   swift-part:
@@ -29,4 +30,4 @@ parts:
 
 apps:
   swift:
-    command: usr/bin/swift
+    command: bin/swift

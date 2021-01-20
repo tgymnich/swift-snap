@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="https://avatars1.githubusercontent.com/u/29598503?v=3&s=256" alt="[Project]">
   <br />
-  [Project]
+  Swift
 </h1>
 
 <p align="center"><b>This is the snap for Swift</b>, <i>“Swift makes it easy to write software that is incredibly fast and safe by design.”</i>. It works on Ubuntu, Fedora, Debian, and other major Linux

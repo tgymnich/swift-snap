@@ -29,4 +29,4 @@ parts:
 
 apps:
   swift:
-    command: bin/swift
+    command: usr/bin/swift

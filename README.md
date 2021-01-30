@@ -24,7 +24,7 @@ distributions.</p>
     git clone https://github.com/tgymnich/swift-snap.git
     cd swift-snap
     snapcraft
-    sudo snap install --classic swift_5.3.2_amd64.snap
+    sudo snap install --classic --dangerous swift_5.3.2_amd64.snap
 
 <!-- Uncomment and modify this when your snap is available on the store
 [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/my-snap-name)

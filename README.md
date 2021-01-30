@@ -20,7 +20,7 @@ distributions.</p>
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters</p>
 
 ## Install
-
+    sudo snap install snapcraft --classic // required to build snaps
     git clone https://github.com/tgymnich/swift-snap.git
     cd swift-snap
     snapcraft

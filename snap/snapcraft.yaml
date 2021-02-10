@@ -1,5 +1,5 @@
 name: swift
-base: core18
+base: core20
 version: '5.3.3'
 summary: Snap package for the Swift programming language
 description: |
@@ -12,21 +12,21 @@ architectures: [amd64]
 parts:
   swift-part:
     plugin: dump
-    source: https://swift.org/builds/swift-5.3.3-release/ubuntu1804/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz
+    source: https://swift.org/builds/swift-5.3.3-release/ubuntu2004/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu20.04.tar.gz
     build-packages:
         - curl
         - dirmngr
         - gpg
     stage-packages:
-        - libatomic1
         - libcurl4
         - libxml2
         - libedit2
         - libsqlite3-0
         - libc6-dev
         - binutils
-        - libgcc-5-dev
-        - libstdc++-5-dev
+        - libgcc-9-dev
+        - libstdc++-9-dev
+        - libz3-dev
         - zlib1g-dev
         - libpython2.7
         - tzdata
@@ -35,7 +35,7 @@ parts:
     override-pull: |
         export DEBIAN_FRONTEND=noninteractive
         export GNUPGHOME="$(mktemp -d)"
-        curl --progress-bar -fSL "https://swift.org/builds/swift-5.3.3-release/ubuntu1804/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz" -o swift.tar.gz "https://swift.org/builds/swift-5.3.3-release/ubuntu1804/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz.sig" -o swift.tar.gz.sig
+        curl --progress-bar -fSL "https://swift.org/builds/swift-5.3.3-release/ubuntu2004/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu20.04.tar.gz" -o swift.tar.gz "https://swift.org/builds/swift-5.3.3-release/ubuntu2004/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu20.04.tar.gz.sig" -o swift.tar.gz.sig
         gpg --batch --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys "A62AE125BBBFBB96A6E042EC925CC1CCED3D1561"
         gpg --batch --verify swift.tar.gz.sig swift.tar.gz
         tar -xzf swift.tar.gz --strip-components=2
